@@ -1,0 +1,189 @@
+.pf-ldr {
+  position: relative;
+  --ldr-on: var(--neon-cyan);
+  --ldr-track: rgba(126, 146, 166, 0.20);
+}
+
+.pf-ldr__track,
+.pf-ldr__fill,
+.pf-spin {
+  -webkit-mask-image: var(--mask);
+          mask-image: var(--mask);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
+.pf-ldr__track,
+.pf-ldr__fill {
+  position: absolute;
+  inset: 0;
+}
+.pf-ldr__track {
+  background: var(--ldr-track);
+}
+.pf-ldr__fill {
+  filter: drop-shadow(0 0 6px rgba(52, 231, 228, 0.55));
+}
+.pf-ldr--bar .pf-ldr__fill {
+  background: linear-gradient(90deg,
+    var(--ldr-on) 0 calc(var(--p) * 1%), transparent calc(var(--p) * 1%));
+}
+.pf-ldr--ring .pf-ldr__fill {
+  background: conic-gradient(
+    var(--ldr-on) 0 calc(var(--p) * 1%), transparent calc(var(--p) * 1%));
+}
+
+
+.pf-spin {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(214, 255, 254, 0.95), var(--neon-cyan) 62%, var(--neon-cyan-dim) 100%);
+  filter: drop-shadow(0 0 10px rgba(52, 231, 228, 0.5));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pf-spin {
+    animation: pf-spin 2.8s linear infinite;
+  }
+}
+@keyframes pf-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===================================================================
+   1 · PRELOADER (initial page load)
+   =================================================================== */
+.pf-pre {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(120% 100% at 50% 50%, rgba(11, 16, 24, 0.55), rgba(5, 7, 11, 0.97)),
+    #06080c;
+  transition: opacity .45s var(--pf-ease, ease), visibility .45s;
+}
+.pf-pre.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.pf-pre__inner {
+  width: min(420px, 78vw);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pf-pre__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.pf-pre__tag {
+  color: var(--text-2);
+}
+.pf-pre__tag .br {
+  color: var(--neon-cyan);
+  padding: 0 2px;
+}
+.pf-pre__pct {
+  color: var(--neon-cyan);
+  font-variant-numeric: tabular-nums;
+}
+.pf-pre .pf-ldr--bar {
+  width: 100%;
+  aspect-ratio: 373 / 27;
+}
+.pf-pre__hint {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  text-align: center;
+}
+
+/* ===================================================================
+   2 · BOOT SCREEN (scroll: hero → site)
+   =================================================================== */
+.pf-bootscreen {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s var(--pf-ease, ease), visibility .4s;
+}
+.pf-bootscreen.on {
+  opacity: 1;
+  visibility: visible;
+}
+.pf-bootscreen__scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 50% 42%, rgba(5, 8, 12, 0.72), rgba(4, 6, 10, 0.95));
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.pf-bootscreen__ring {
+  position: absolute;
+  top: clamp(13vh, 19vh, 23vh);
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(118px, 17vh, 164px);
+  aspect-ratio: 141 / 140;
+}
+.pf-bootscreen__readout {
+  position: absolute;
+  top: calc(clamp(13vh, 19vh, 23vh) + clamp(118px, 17vh, 164px) + 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  white-space: nowrap;
+  text-align: center;
+}
+.pf-bootscreen__pct {
+  color: var(--neon-cyan);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 18px rgba(52, 231, 228, 0.4);
+}
+.pf-bootscreen__spin {
+  position: absolute;
+  bottom: clamp(11vh, 15vh, 18vh);
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(150px, 23vh, 216px);
+  aspect-ratio: 238 / 114;
+}
+
+@media (max-width: 600px) {
+  .pf-bootscreen__ring {
+    top: 16vh;
+    width: clamp(108px, 26vw, 140px);
+  }
+  .pf-bootscreen__spin {
+    bottom: 12vh;
+    width: clamp(140px, 56vw, 190px);
+  }
+}

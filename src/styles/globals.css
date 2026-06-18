@@ -1,0 +1,467 @@
+/* neon-dark semantic colors (dark-first :root default) */
+:root {
+  /* neon palette */
+  --neon-cyan: rgb(52, 231, 228);
+  --neon-cyan-dim: rgb(34, 162, 162);
+  --neon-magenta: rgb(255, 61, 129);
+  --neon-violet: rgb(167, 139, 250);
+  --neon-amber: rgb(251, 146, 60);
+  --neon-lime: rgb(163, 230, 53);
+
+  --neon-cyan-05: rgba(52, 231, 228, 0.05);
+  --neon-cyan-10: rgba(52, 231, 228, 0.10);
+  --neon-cyan-20: rgba(52, 231, 228, 0.20);
+  --neon-cyan-40: rgba(52, 231, 228, 0.40);
+  --neon-cyan-60: rgba(52, 231, 228, 0.60);
+  --neon-magenta-10: rgba(255, 61, 129, 0.10);
+  --neon-magenta-20: rgba(255, 61, 129, 0.20);
+  --neon-magenta-40: rgba(255, 61, 129, 0.40);
+
+  /* surfaces */
+  --bg: rgb(8, 8, 10);
+  --bg-2: rgb(12, 12, 15);
+  --surface: rgba(250, 250, 250, 0.02);
+  --surface-2: rgba(250, 250, 250, 0.04);
+  --surface-hover: rgba(250, 250, 250, 0.06);
+  --surface-solid: rgb(18, 18, 22);
+  --overlay: rgba(8, 8, 10, 0.72);
+
+  /* borders */
+  --border: rgba(250, 250, 250, 0.08);
+  --border-strong: rgba(250, 250, 250, 0.16);
+  --border-neon: var(--neon-cyan-40);
+  --hairline: rgba(250, 250, 250, 0.06);
+
+  /* text */
+  --text-1: rgb(250, 250, 250);
+  --text-2: rgb(161, 161, 170);
+  --text-3: rgb(113, 113, 122);
+  --text-on-neon: rgb(8, 8, 10);
+  --text-link: var(--neon-cyan);
+
+  /* brand / interactive (shadcn semantics mapped to neon) */
+  --brand: var(--neon-cyan);
+  --brand-foreground: var(--neon-cyan);
+  --ring: var(--neon-cyan-40);
+  --primary: rgb(250, 250, 250);
+  --primary-foreground: rgb(9, 9, 11);
+  --secondary: rgba(250, 250, 250, 0.06);
+  --secondary-foreground: rgb(250, 250, 250);
+  --muted: rgba(250, 250, 250, 0.04);
+  --muted-foreground: rgb(161, 161, 170);
+  --accent: rgba(250, 250, 250, 0.08);
+
+  /* status */
+  --success: var(--neon-lime);
+  --warning: var(--neon-amber);
+  --danger: rgb(248, 113, 113);
+  --info: var(--neon-violet);
+}
+
+/* typography */
+:root {
+  /* Eurostile Extended → Michroma fallback (wide squared techno) */
+  --font-display: "Eurostile Extended", "Michroma", "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --text-hero: 88px;
+  --text-display: 60px;
+  --text-h1: 44px;
+  --text-h2: 30px;
+  --text-h3: 22px;
+  --text-lg: 18px;
+  --text-body: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-kicker: 12px;
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.18;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: 0em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.04em;
+  --tracking-hud: 0.18em;
+}
+
+/* spacing, radii, shadows, glows, textures, motion */
+:root {
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --section-y: 112px;
+  --container: 1200px;
+  --gutter: 24px;
+
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-pop: 0 12px 40px rgba(0, 0, 0, 0.6);
+
+  --glow-cyan-sm: 0 0 12px rgba(52, 231, 228, 0.35);
+  --glow-cyan-md: 0 0 24px rgba(52, 231, 228, 0.35), 0 0 4px rgba(52, 231, 228, 0.6);
+  --glow-cyan-lg: 0 0 48px rgba(52, 231, 228, 0.30), 0 0 12px rgba(52, 231, 228, 0.5);
+  --glow-magenta-md: 0 0 24px rgba(255, 61, 129, 0.35), 0 0 4px rgba(255, 61, 129, 0.6);
+  --glow-inset: inset 0 0 0 1px rgba(52, 231, 228, 0.4), inset 0 0 16px rgba(52, 231, 228, 0.08);
+
+  --grid-line: rgba(250, 250, 250, 0.035);
+  --grid-size: 40px;
+  --grid: linear-gradient(var(--grid-line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  --scanline: repeating-linear-gradient(
+      to bottom, rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 3px);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 360ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-regular);
+}
+
+/* Headings default to the display family, tight tracking. */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-1);
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--neon-cyan-40);
+  color: var(--text-1);
+}
+
+/* Mono HUD label utility used across the system. */
+.hud-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-hud);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+/* Thin neon scrollbar for in-system scroll regions. */
+.neon-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.neon-scroll::-webkit-scrollbar-thumb {
+  background: var(--neon-cyan-20);
+  border-radius: var(--radius-full);
+}
+.neon-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* portfolio: cold-winter retint + layout on top of the neon-dark system */
+:root {
+  --ice: rgb(216, 240, 247);
+  --steel: rgb(126, 146, 166);
+  --steel-dim: rgb(86, 102, 120);
+  --winter-violet: rgb(150, 138, 224);
+
+  /* magenta remapped to muted violet across the system */
+  --neon-magenta: rgb(150, 138, 224);
+  --neon-magenta-10: rgba(150, 138, 224, 0.10);
+  --neon-magenta-20: rgba(150, 138, 224, 0.20);
+  --neon-magenta-40: rgba(150, 138, 224, 0.40);
+  --glow-magenta-md: 0 0 24px rgba(150, 138, 224, 0.34), 0 0 4px rgba(150, 138, 224, 0.55);
+
+  --bg: rgb(7, 9, 12);
+  --bg-2: rgb(10, 13, 17);
+
+  --pf-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* effect intensity, 0..1 */
+  --fx: 0.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  overflow-x: hidden;
+}
+body.pf-lock {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.pf {
+  position: relative;
+  min-height: 100vh;
+}
+.pf-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.pf-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: var(--tracking-hud);
+  text-transform: uppercase;
+  color: var(--neon-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.pf-eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--neon-cyan), transparent);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.pf-content {
+  position: relative;
+}
+.pf-content::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--grid);
+  background-size: var(--grid-size) var(--grid-size);
+  opacity: calc(0.5 * var(--fx));
+  mask-image: radial-gradient(120% 80% at 50% 0%, #000 30%, transparent 90%);
+}
+.pf-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pf-section {
+  padding: clamp(80px, 12vh, 130px) 0;
+  position: relative;
+}
+.pf-section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 56px;
+}
+.pf-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 4.2vw, 50px);
+  letter-spacing: 0;
+  line-height: 1.12;
+  margin: 0;
+}
+.pf-h2 em {
+  font-style: normal;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 30px rgba(52,231,228,0.45);
+}
+
+.pf-section__head .pf-h2 {
+  text-transform: uppercase;
+  font-size: clamp(23px, 3.3vw, 40px);
+  line-height: 1.32;
+  letter-spacing: 0.005em;
+  max-width: 19ch;
+  text-wrap: balance;
+}
+.pf-section__head .pf-h2 .dot {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 24px rgba(52,231,228,0.5);
+}
+
+.sk-btn {
+  --_clip: polygon(11px 0, calc(100% - 13px) 0, 100% 50%, calc(100% - 13px) 100%, 0 100%, 0 11px);
+  --_fill: rgba(250,250,250,0.04);
+  --_edge: var(--border-strong);
+  --_glowc: transparent;
+  --_hud: var(--neon-cyan);
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.sk-btn > * {
+  position: relative;
+  z-index: 1;
+}
+.sk-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  clip-path: var(--_clip);
+  background: var(--_fill);
+  filter:
+    drop-shadow(1px 0 0 var(--_edge)) drop-shadow(-1px 0 0 var(--_edge))
+    drop-shadow(0 1px 0 var(--_edge)) drop-shadow(0 -1px 0 var(--_edge))
+    drop-shadow(0 0 8px var(--_glowc));
+  transition: background var(--dur) var(--ease-out), filter var(--dur) var(--ease-out);
+}
+.sk-btn::after {
+  /* bottom-right HUD hazard stripes */
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+  width: 66px;
+  height: 6px;
+  z-index: 2;
+  background: repeating-linear-gradient(135deg, var(--_hud) 0 1.5px, transparent 1.5px 4px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.sk-btn:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 3px;
+}
+
+/* asymmetric padding so the label clears the chamfer + arrow */
+.sk-btn--sm {
+  padding: 0 16px 0 13px !important;
+}
+.sk-btn--md {
+  padding: 0 23px 0 17px !important;
+}
+.sk-btn--lg {
+  padding: 0 31px 0 22px !important;
+}
+
+/* per-variant fill / edge / glow / stripe color */
+.sk-btn--neon {
+  color: var(--text-on-neon) !important;
+  --_fill: var(--neon-cyan);
+  --_edge: rgba(214,255,254,0.9);
+  --_glowc: rgba(52,231,228,0.5);
+  --_hud: rgba(7,9,12,0.6);
+}
+.sk-btn--neon:hover {
+  --_glowc: rgba(52,231,228,0.85);
+}
+.sk-btn--default {
+  color: #101012 !important;
+  --_fill: linear-gradient(180deg,#fafafa,#e9e9ec);
+  --_edge: rgba(255,255,255,0.92);
+  --_glowc: transparent;
+  --_hud: rgba(7,9,12,0.55);
+}
+.sk-btn--default:hover {
+  --_fill: linear-gradient(180deg,#fff,#f2f2f5);
+}
+.sk-btn--glow {
+  color: var(--text-1) !important;
+  --_fill: linear-gradient(180deg, var(--neon-cyan-05), rgba(250,250,250,0.05));
+  --_edge: var(--neon-cyan-40);
+  --_glowc: rgba(52,231,228,0.28);
+  --_hud: var(--neon-cyan);
+}
+.sk-btn--glow:hover {
+  --_edge: var(--neon-cyan);
+  --_glowc: rgba(52,231,228,0.5);
+}
+.sk-btn--outline {
+  color: var(--text-1) !important;
+  --_fill: rgba(250,250,250,0.03);
+  --_edge: var(--border-strong);
+  --_glowc: transparent;
+  --_hud: var(--neon-cyan);
+}
+.sk-btn--outline:hover {
+  color: var(--neon-cyan) !important;
+  --_edge: var(--neon-cyan);
+  --_glowc: rgba(52,231,228,0.4);
+}
+.sk-btn--secondary {
+  --_fill: var(--surface-2);
+  --_edge: var(--border-strong);
+  --_glowc: transparent;
+  --_hud: var(--steel);
+}
+.sk-btn--secondary:hover {
+  --_fill: var(--surface-hover);
+  --_edge: var(--neon-cyan-40);
+}
+.sk-btn--ghost {
+  --_fill: transparent;
+  --_edge: transparent;
+  --_glowc: transparent;
+  --_hud: transparent;
+}
+.sk-btn--ghost:hover {
+  --_fill: var(--surface-2);
+  --_edge: var(--border);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sk-btn:active::before {
+    transform: translateY(1px) scale(0.99);
+  }
+}
