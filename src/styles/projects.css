@@ -144,16 +144,6 @@
   font-size: 64px;
   opacity: 0.92;
 }
-.pf-card__no {
-  position: absolute;
-  z-index: 2;
-  top: 14px;
-  left: 16px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: var(--tracking-hud);
-  color: var(--ice);
-}
 .pf-card__cat {
   position: absolute;
   z-index: 2;
@@ -334,14 +324,6 @@
   letter-spacing: -0.02em;
   margin: 0;
   position: relative;
-}
-.pf-modal__sub {
-  color: var(--text-2);
-  font-size: 16px;
-  line-height: 1.55;
-  margin: 12px 0 0;
-  position: relative;
-  max-width: 60ch;
 }
 .pf-modal__body {
   padding: 28px 34px 32px;

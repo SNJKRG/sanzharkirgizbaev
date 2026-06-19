@@ -188,15 +188,6 @@ a {
   color: var(--text-1);
 }
 
-/* Mono HUD label utility used across the system. */
-.hud-label {
-  font-family: var(--font-mono);
-  font-size: var(--text-kicker);
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-hud);
-  text-transform: uppercase;
-  color: var(--text-2);
-}
 
 /* Thin neon scrollbar for in-system scroll regions. */
 .neon-scroll::-webkit-scrollbar {

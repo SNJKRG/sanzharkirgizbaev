@@ -28,14 +28,11 @@ function coverFor(folder) {
 
 const GLYPHS = ["◆", "▲", "❖", "◈", "⬡", "✦", "◇", "⬢", "✕", "◐", "⬣", "✣"];
 
-// --- project skeletons -------------------------------------------------------
-// `folder` must match the directory in src/assets.
-// Fill in `desc`, `overview`, `tags`, `links` (and tweak `cat`/`year`) per project.
 const RAW = [
   {
     folder: "tochno-generator", title: "Tochno Generator",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "Internal generator for real estate Instagram Stories",
     overview:
       "Tochno Generator is a full-stack internal tool for generating ready-to-publish Instagram Stories for real estate marketing. I built the workflow, pricing calculator, image-generation logic, admin panel, and database structure around 10,000+ apartment records. The tool reduced manual design work and increased story production speed by roughly 3x.",
@@ -53,7 +50,7 @@ const RAW = [
   {
     folder: "tochno-direct", title: "Tochno Direct",
     cat: "fullstack", catLabel: "Fullstack", year: "2026", role: "Full-stack developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "Ad-platform automation over the Yandex Direct API",
     overview:
       "Tochno Direct is an internal service that automates ad-placement management on top of the Yandex Direct API v5. It applies rules to exclude suspicious and underperforming placements across selected projects and campaigns, and keeps a full history of every processed placement for auditing and recovery. Operators control automation per project and view all statistics in one dashboard.",
@@ -70,7 +67,7 @@ const RAW = [
   {
     folder: "tochno-creatives", title: "Tochno Creatives",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "Unified ad-creative analytics across Yandex and VK",
     overview:
       "Tochno Creatives is an internal dashboard that consolidates ad-creative statistics from the Yandex and VK APIs across 10 projects into a single view. The backend walks each platform's hierarchy down to individual creatives, so staff review performance without navigating each platform manually.",
@@ -86,7 +83,7 @@ const RAW = [
   {
     folder: "tochno-edit", title: "Tochno Feed Processor",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "Bulk feed editor with apartment-cover image generation",
     overview:
       "Tochno Feed Processor is an internal tool for bulk-updating product feed entities for a construction company, centered on regenerating cover images for apartment floor plans. It stores each original floor plan in its own database, so covers can be swapped repeatedly without losing the source image.",
@@ -102,7 +99,7 @@ const RAW = [
   {
     folder: "tochno-utm", title: "Tochno UTM",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "UTM tag builder with stored history and Metrika analytics",
     overview:
       "Tochno UTM is an internal web app that generates UTM tags following standard conventions and stores every tag it creates. By connecting one or more Yandex Metrika accounts, users pull analytics back for each tag, turning a throwaway link builder into a place where tags are stored and measured together. It is used by around 50 people across the company each month.",
@@ -118,7 +115,7 @@ const RAW = [
   {
     folder: "tochno-basis", title: "Tochno Basis",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "Electronic queue for office key handover, built on the Basis API",
     overview:
       "Tochno Basis is an electronic-queue web app built on the Basis real estate platform API, used in company offices to manage key handover. Managers process clients in order while clients see their place in the queue.",
@@ -135,7 +132,7 @@ const RAW = [
   {
     folder: "atalyk", title: "Atalyk School",
     cat: "tilda", catLabel: "Tilda", year: "2025", role: "Web developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "School website for announcements and documents",
     overview:
       "Atalyk School is a Tilda website that lets the administration publish announcements and keep content current without developer involvement. The documents section gathers all of the school's documentation in one place.",
@@ -150,7 +147,7 @@ const RAW = [
   {
     folder: "portfolio", title: "Arcade Portfolio",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Frontend developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Retro arcade-themed portfolio with a word-guessing game",
     overview:
       "Arcade Portfolio is a personal portfolio styled after classic arcade video games, and one of my first layout projects. It includes a playable word-prediction game built in vanilla JavaScript.",
@@ -164,7 +161,7 @@ const RAW = [
   {
     folder: "kvantlandia", title: "Kvantlandia",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer / Team lead",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Interactive Olympiad platform for math, physics, and CS tournaments",
     overview:
       "Kvantlandia is an interactive platform that delivers Olympiad-style problems to school students. Over two years it hosted 5 full tournaments across math, physics, and computer science, with real-time components on both the frontend and backend. I led a team of 4 developers building full-stack tournaments end to end.",
@@ -180,7 +177,7 @@ const RAW = [
   {
     folder: "parkovki", title: "Parking Reservation",
     cat: "fullstack", catLabel: "Fullstack", year: "2026", role: "Full-stack developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Parking-space booking with an interactive SVG complex map",
     overview:
       "Parking Reservation is a parking-space booking service built from scratch. An interactive SVG map of the complex shows occupied, free, and pending-confirmation spaces in real time, and bookings flow into the company CRM. The improved booking experience increased parking rental requests by 50%.",
@@ -196,7 +193,7 @@ const RAW = [
   {
     folder: "m-starter", title: "M-Starter",
     cat: "fullstack", catLabel: "Fullstack", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Full-stack e-commerce store built and maintained end to end",
     overview:
       "M-Starter is a full-stack e-commerce application built from scratch with a colleague. After my colleague left, I took over full ownership across the frontend, backend, and database.",
@@ -211,7 +208,7 @@ const RAW = [
   {
     folder: "staysafe", title: "StaySafe",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Frontend developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Landing page with Telegram-bot lead capture",
     overview:
       "StaySafe is a landing page built from scratch with a lead-capture form that delivers submissions straight to a Telegram bot, so leads reach the team instantly.",
@@ -225,7 +222,7 @@ const RAW = [
   {
     folder: "catalog-tg", title: "Catalog TG",
     cat: "frontend", catLabel: "Frontend", year: "2025", role: "Full-stack developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Telegram web-app catalog spanning 10 residential projects",
     overview:
       "Catalog TG is a Telegram web-app catalog that lets users browse apartments from 10 residential projects and submit a booking or information request in a few taps. It follows the familiar Telegram bot UI for a low-friction experience.",
@@ -241,7 +238,7 @@ const RAW = [
   {
     folder: "chatplace", title: "ChatPlace Bot",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Bot developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Telegram sales bot with payment verification",
     overview:
       "ChatPlace Bot is a Telegram bot built on the ChatPlace platform for selling digital content. It handles the purchase flow and confirms payment before delivering content.",
@@ -255,7 +252,7 @@ const RAW = [
   {
     folder: "elitstom", title: "Elit Stom",
     cat: "tilda", catLabel: "Tilda", year: "2025", role: "Web developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "41-page dental clinic website rebuilt on Tilda",
     overview:
       "Elit Stom is a 41-page dental clinic website rebuilt on Tilda around a refreshed design, migrated to cut maintenance and operating costs. A simplified lead-submission flow doubled the number of received applications.",
@@ -271,7 +268,7 @@ const RAW = [
   {
     folder: "restom", title: "Re-Stom",
     cat: "tilda", catLabel: "Tilda", year: "2025", role: "Web developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Redesigned and built a family of 6 dental landing pages",
     overview:
       "Re-Stom is a redesigned dental landing page on Tilda, updated with a new color palette and a fixed mobile layout. Most blocks are custom Zero Blocks driven by hand-written JavaScript, and the work extended into a family of 6 specialty landing pages.",
@@ -286,7 +283,7 @@ const RAW = [
   {
     folder: "kuzovkin", title: "Kuzovkin",
     cat: "frontend", catLabel: "Frontend", year: "2025", role: "Frontend developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Three functional pages built with Bulma on a Flask app",
     overview:
       "Kuzovkin is a set of 3 functional pages built with the Bulma CSS framework, integrated into a Python Flask application.",
@@ -300,7 +297,7 @@ const RAW = [
   {
     folder: "raduga", title: "Raduga Kindergarten",
     cat: "tilda", catLabel: "Tilda", year: "2024", role: "Web developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Colorful, fully responsive kindergarten website",
     overview:
       "Raduga Kindergarten is a bright, playful website built on Tilda, fully responsive across devices, that holds all the kindergarten's practical information in one place.",
@@ -314,7 +311,7 @@ const RAW = [
   {
     folder: "eurotour", title: "Eurotour",
     cat: "fullstack", catLabel: "Fullstack", year: "2024", role: "Full-stack developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Full-stack geography quiz with an interactive world map",
     overview:
       "Eurotour is a full-stack geography quiz built on a client-server architecture in Python, with an interactive world map for country selection.",
@@ -329,7 +326,7 @@ const RAW = [
   {
     folder: "biamino", title: "Biamino Club",
     cat: "frontend", catLabel: "Frontend", year: "2025", role: "Frontend developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Investment tracking and management platform",
     overview:
       "Biamino Club is a platform that gives users a convenient interface for tracking and managing investments with professional-grade financial tools. I contributed to the frontend on a Supabase backend.",
@@ -343,7 +340,7 @@ const RAW = [
   {
     folder: "mujiru", title: "Mujiri",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Frontend developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Clean, responsive landing page",
     overview:
       "Mujiri is a clean landing page hand-coded to look right on every screen size.",
@@ -356,7 +353,7 @@ const RAW = [
   {
     folder: "gifty", title: "Gifty Mini App",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Frontend developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Telegram Mini App for sending gifts (contest entry)",
     overview:
       "Gifty is a Telegram Mini App for sending gifts, built for a contest organized by @CryptoBot using Telegram's then-new Mini Apps feature. I built the frontend.",
@@ -370,7 +367,7 @@ const RAW = [
   {
     folder: "ushoo", title: "Ushoo",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Frontend developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Hand-coded landing page with an interactive gallery",
     overview:
       "Ushoo is a hand-coded, fully responsive landing page with an interactive image gallery.",
@@ -384,7 +381,7 @@ const RAW = [
   {
     folder: "sneakercare", title: "Sneakercare.kz",
     cat: "frontend", catLabel: "Frontend", year: "2024", role: "Frontend developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "E-commerce web app with cart, orders, and accounts",
     overview:
       "Sneakercare.kz is an e-commerce web app where users browse products, check size and availability details, build a cart, and place orders. It includes account creation and login.",
@@ -399,7 +396,7 @@ const RAW = [
   {
     folder: "football", title: "Football Match Prediction",
     cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Predicting top-5 league match outcomes with scikit-learn",
     overview:
       "Football Match Prediction is a notebook that predicts match outcomes across the top 5 European leagues from an open Kaggle dataset. It reaches 60% accuracy on a three-class problem, with a log-loss of 0.893 and a Ranked Probability Score of 0.171.",
@@ -415,7 +412,7 @@ const RAW = [
   {
     folder: "phpapp", title: "Appointment System",
     cat: "fullstack", catLabel: "Fullstack", year: "2023", role: "Full-stack developer",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Self-service booking app backed by Google Calendar",
     overview:
       "Appointment System is a self-service booking app I built so students could reserve personal sessions on my calendar. It integrates the Google Calendar API to keep bookings in sync with my real schedule.",
@@ -430,7 +427,7 @@ const RAW = [
   {
     folder: "image-captioner", title: "Image Captioner",
     cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "AI app that generates captions for uploaded images",
     overview:
       "Image Captioner is a Streamlit app that lets users upload an image, preview it, and instantly generate a descriptive caption with a computer-vision model.",
@@ -444,7 +441,7 @@ const RAW = [
   {
     folder: "point-cloud", title: "Point Cloud Processing",
     cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "From-scratch SVD applied to 3D point-cloud geometry",
     overview:
       "Point Cloud Processing implements SVD from scratch, without libraries, and applies it to 3D point clouds for bounding boxes, surface normals, curvature, and ICP alignment. The custom SVD matched NumPy's and converged to within 1e-15.",
@@ -460,7 +457,7 @@ const RAW = [
   {
     folder: "optimization", title: "Optimization for Data Science",
     cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
-    timeline: "", status: "Completed",
+    status: "Completed",
     desc: "Two-stage modeling and budget optimization for DALY burden",
     overview:
       "Optimization for Data Science is a two-stage project on the global DALY (disability-adjusted life year) burden: first fitting an exponential burden function, then optimizing fund allocation against it. Allocating a 10 billion dollar budget produced a 60% better outcome than an equal-split baseline.",
@@ -475,7 +472,7 @@ const RAW = [
   {
     folder: "scrapper", title: "Scraper Builder",
     cat: "frontend", catLabel: "Frontend", year: "2025", role: "Frontend developer",
-    timeline: "", status: "Internal tool",
+    status: "Internal tool",
     desc: "Visual no-code builder for web-scraping scenarios",
     overview:
       "Scraper Builder is a visual, no-code editor for composing web-scraping and browser-automation scenarios from reusable command blocks. Each block targets elements via CSS selectors and compiles to a structured JSON scenario, with a synchronized raw-JSON view for advanced editing.",
@@ -490,7 +487,7 @@ const RAW = [
   {
     folder: "r2r", title: "R2R Hotel Templates",
     cat: "tilda", catLabel: "Tilda", year: "2025", role: "Web developer",
-    timeline: "", status: "Live",
+    status: "Live",
     desc: "Reusable Tilda templates with a customized booking module",
     overview:
       "R2R Hotel Templates is a set of 3 reusable Tilda templates for a startup building hotel websites. The Shelter booking module is integrated and customized to fit each template.",
@@ -512,7 +509,6 @@ export const PROJECTS = RAW
     accent: i % 2 === 1,
     ...p,
     id: p.folder,
-    no: String(i + 1).padStart(2, "0"),
     cover: coverFor(p.folder),
     images: galleryFor(p.folder),
   }));

@@ -1,7 +1,6 @@
 .pf-card__title,
 .pf-card__desc,
 .pf-modal__title,
-.pf-modal__sub,
 .pf-modal__overview {
   overflow-wrap: anywhere;
 }
@@ -102,11 +101,6 @@
     right: 14px;
   }
 
-  /* hero — drop fine HUD chrome, keep the headline + CTA legible */
-  .pf-hero__hud,
-  .pf-hero__bracket {
-    display: none;
-  }
   .pf-hero__fg {
     bottom: 110px;
   }
@@ -138,14 +132,6 @@
     height: 56vh;
     bottom: 12vh;
   }
-  .pf-hero__role {
-    gap: 14px;
-    letter-spacing: 0.22em;
-  }
-  .pf-hero__role::before,
-  .pf-hero__role::after {
-    width: clamp(22px, 6vw, 44px);
-  }
 }
 
 /* ---- Small phones ---------------------------------------------------- */
@@ -162,15 +148,6 @@
   }
   .pf-section__head {
     margin-bottom: 34px;
-  }
-
-  /* keep the surname from being clipped too hard, shrink role chrome */
-  .pf-hero__role::before,
-  .pf-hero__role::after {
-    display: none;
-  }
-  .pf-hero__role {
-    letter-spacing: 0.18em;
   }
 }
 
