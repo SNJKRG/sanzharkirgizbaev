@@ -23,6 +23,12 @@ export default function Projects({ registerRef }) {
   const [zoom, setZoom] = useState(null); // enlarged gallery image src
   const shown = filter === "all" ? PROJECTS : PROJECTS.filter((p) => p.cat === filter);
 
+  const years = shown.map((p) => Number(p.year));
+  const minY = Math.min(...years), maxY = Math.max(...years);
+  const span = minY === maxY ? `${minY}` : `${minY}–${maxY}`;
+  const noun = shown.length === 1 ? "PROJECT" : "PROJECTS";
+  const prep = minY === maxY ? "IN" : "ACROSS";
+
   useEffect(() => {
     if (!active && !zoom) return;
     // Escape closes the zoomed image first, then the project modal.
@@ -54,7 +60,7 @@ export default function Projects({ registerRef }) {
           ))}
         </div>
         <div className="pf-work__count">
-          <span><b>{PROJECTS.length}</b> PROJECTS ACROSS <b>2023–2026</b></span>
+          <span><b>{shown.length}</b> {noun} {prep} <b>{span}</b></span>
         </div>
       </div>
 
