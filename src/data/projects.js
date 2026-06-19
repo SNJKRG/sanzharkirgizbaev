@@ -395,7 +395,7 @@ const RAW = [
   },
   {
     folder: "football", title: "Football Match Prediction",
-    cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
+    cat: "ml", catLabel: "Academic ", year: "2026", role: "ML / Data Science",
     status: "Completed",
     desc: "Predicting top-5 league match outcomes with scikit-learn",
     overview:
@@ -426,7 +426,7 @@ const RAW = [
 
   {
     folder: "image-captioner", title: "Image Captioner",
-    cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
+    cat: "ml", catLabel: "Academic ", year: "2026", role: "ML / Data Science",
     status: "Completed",
     desc: "AI app that generates captions for uploaded images",
     overview:
@@ -440,7 +440,7 @@ const RAW = [
   },
   {
     folder: "point-cloud", title: "Point Cloud Processing",
-    cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
+    cat: "ml", catLabel: "Academic ", year: "2026", role: "ML / Data Science",
     status: "Completed",
     desc: "From-scratch SVD applied to 3D point-cloud geometry",
     overview:
@@ -456,7 +456,7 @@ const RAW = [
   },
   {
     folder: "optimization", title: "Optimization for Data Science",
-    cat: "ml", catLabel: "Machine Learning", year: "2026", role: "ML / Data Science",
+    cat: "ml", catLabel: "Academic ", year: "2026", role: "ML / Data Science",
     status: "Completed",
     desc: "Two-stage modeling and budget optimization for DALY burden",
     overview:
@@ -519,5 +519,5 @@ export const PROJECT_FILTERS = [
   { key: "fullstack", label: "Fullstack" },
   { key: "frontend", label: "Frontend" },
   { key: "tilda", label: "Tilda" },
-  { key: "ml", label: "Machine Learning" },
+  { key: "ml", label: "Academic" },
 ];
