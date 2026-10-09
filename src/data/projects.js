@@ -149,6 +149,23 @@ const RAW = [
     links: { demo: "https://bogatovsoft.ru" },
   },
   {
+    folder: "muras-nuru", title: "Muras Nuru BLVD",
+    cat: "frontend", catLabel: "Frontend", year: "2026", role: "Frontend developer / designer",
+    status: "Live demo",
+    desc: "Landing page for a residential quarter in Bishkek built around a boulevard",
+    overview:
+      "Muras Nuru BLVD is a residential quarter in the south of Bishkek by the developer Nurzaman, built in three stages around a pedestrian boulevard. The landing page has 16 sections that take a buyer from the idea of the project to a chosen floor plan and a question to the sales office. The visual language pairs project renders with flat gouache illustrations and Kyrgyz ornament on a white page.",
+    highlights: [
+      "Built an apartment finder that filters plans by stage, rooms and terrace and passes the chosen plan into the contact form and the WhatsApp message.",
+      "Generated a set of gouache illustrations in one style, cut them out with transparency and added separate crops for mobile.",
+      "Used native dialog elements for the menu, contact panel and image viewer instead of a modal library.",
+      "Loaded the map only on request and images lazily, so the first screen ships two images.",
+      "Linked the 210 MB of stage catalogs from the developer's site instead of hosting the PDFs.",
+    ],
+    tags: ["React", "TypeScript", "Vite", "Vercel"],
+    links: { demo: "https://muras-nuru.vercel.app", repo: "https://github.com/SNJKRG/muras-nuru" },
+  },
+  {
     folder: "sales-copilot", title: "Sales Copilot",
     cat: "fullstack", catLabel: "Fullstack", year: "2026", role: "Full-stack / AI developer",
     status: "Prototype",
