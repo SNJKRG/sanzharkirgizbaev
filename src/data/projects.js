@@ -284,7 +284,7 @@ const RAW = [
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Nodemailer", "nginx", "Docker"],
     links: { demo: "https://tochno-careers.ru" },
   },
-  {
+  /* {
     folder: "navat", title: "NAVAT Chaikhana",
     cat: "frontend", catLabel: "Frontend", year: "2026", role: "Frontend developer",
     status: "In development",
@@ -300,7 +300,7 @@ const RAW = [
     ],
     tags: ["React", "TypeScript", "Vite", "Vercel"],
     links: { repo: "https://github.com/SNJKRG/navat" },
-  },
+  }, */
   {
     folder: "tochno-visuals", title: "Tochno VisualAI",
     cat: "fullstack", catLabel: "Fullstack", year: "2026", role: "Full-stack developer",
